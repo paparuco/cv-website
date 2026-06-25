@@ -85,6 +85,7 @@ export const skills = [
       { name: 'WSL' },
       { name: 'VS Code' }, // Simple Icons dropped the VS Code logo (trademark)
       { name: 'GitHub Copilot', icon: 'githubcopilot', color: 'ffffff' },
+      { name: 'Claude', icon: 'claude' },
       { name: 'AI Agents' },
     ],
   },

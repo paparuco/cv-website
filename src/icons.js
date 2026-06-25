@@ -24,6 +24,7 @@ import {
   siPostgresql,
   siLinux,
   siGithubcopilot,
+  siClaude,
 } from 'simple-icons'
 
 export const iconMap = {
@@ -45,4 +46,5 @@ export const iconMap = {
   postgresql: siPostgresql,
   linux: siLinux,
   githubcopilot: siGithubcopilot,
+  claude: siClaude,
 }
