@@ -14,7 +14,7 @@ export const profile = {
   location: 'Lisbon, Portugal',
   email: 'ricardo.calcado10@gmail.com',
   avatar: 'https://avatars.githubusercontent.com/u/38620750?v=4',
-  resumeUrl: '', // optional: drop a PDF in /public and set e.g. '/cv-website/Ricardo-Calcado-CV.pdf'
+  resumeUrl: 'Ricardo-Calcado-CV.pdf', // file in /public; regenerate via scripts/build-pdf.sh
 }
 
 export const socials = [
