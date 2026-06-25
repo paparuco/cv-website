@@ -166,4 +166,18 @@ doc = SimpleDocTemplate(
     subject="Curriculum Vitae",
 )
 doc.build(story, onFirstPage=footer, onLaterPages=footer)
-print("Wrote", os.path.abspath(OUT))
+
+# Enforce the one-page limit: fail loudly if the content overflows so the CV
+# never silently becomes a 2-page document after a data edit.
+try:
+    from pypdf import PdfReader
+    pages = len(PdfReader(OUT).pages)
+    if pages > 1:
+        raise SystemExit(
+            f"\n✗ CV is {pages} pages — it must fit on ONE page.\n"
+            f"  Trim content in src/data/cv.js (shorten bullets / drop an item)\n"
+            f"  or reduce spacing in scripts/generate_pdf.py, then rebuild.\n"
+        )
+    print(f"Wrote {os.path.abspath(OUT)}  ({pages} page ✓)")
+except ImportError:
+    print("Wrote", os.path.abspath(OUT), "(install pypdf to enforce 1-page limit)")

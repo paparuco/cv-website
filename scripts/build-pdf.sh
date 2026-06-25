@@ -19,8 +19,10 @@ fs.writeFileSync('/tmp/cv.json', JSON.stringify(out, null, 2));
 # 2. Ensure a Python venv with reportlab exists.
 if [ ! -x "$VENV/bin/python" ]; then
   python3 -m venv "$VENV"
-  "$VENV/bin/pip" install --quiet reportlab
 fi
+# reportlab renders the PDF; pypdf enforces the one-page limit.
+"$VENV/bin/python" -c "import reportlab, pypdf" 2>/dev/null || \
+  "$VENV/bin/pip" install --quiet reportlab pypdf
 
 # 3. Render the PDF.
 "$VENV/bin/python" scripts/generate_pdf.py

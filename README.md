@@ -35,7 +35,20 @@ npm run preview    # preview the production build locally
 > `paparuco.github.io`, set `base: '/'` in `vite.config.js`, and update
 > `homepage` in `package.json`.
 
-## Optional: add a PDF résumé
+## CV PDF
 
-Drop a PDF into `public/`, then set `resumeUrl` in `src/data/cv.js`
-(e.g. `'/cv-website/Ricardo-Calcado-CV.pdf'`).
+A print-ready, single-page PDF is generated from the same data as the site
+(`src/data/cv.js`), so the two never drift apart. It lives at
+`public/Ricardo-Calcado-CV.pdf` and is offered via the "Download CV" button.
+
+Regenerate it after editing your data:
+
+```bash
+./scripts/build-pdf.sh
+```
+
+This exports the data to JSON, renders the PDF with ReportLab
+(`scripts/generate_pdf.py`), and **enforces a one-page limit** — the build
+fails if the content overflows onto a second page, so the CV always stays a
+single page. If it fails, trim a bullet or an item in `src/data/cv.js`
+(volunteering is intentionally excluded from the PDF) and rebuild.
