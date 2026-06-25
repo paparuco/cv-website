@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import Section from './components/Section'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
-import Projects from './components/Projects'
 import { profile, socials } from './data/cv'
 
 export default function App() {
@@ -47,11 +46,7 @@ export default function App() {
           <Experience />
         </Section>
 
-        <Section id="projects" index="04" title="Projects">
-          <Projects />
-        </Section>
-
-        <Section id="contact" index="05" title="Get in touch">
+        <Section id="contact" index="04" title="Get in touch">
           <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-8 text-center md:p-12">
             <h3 className="text-2xl font-bold text-slate-100">Let's build something that automates the boring parts.</h3>
             <p className="mx-auto mt-3 max-w-lg text-slate-400">
