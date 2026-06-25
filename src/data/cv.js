@@ -158,12 +158,6 @@ export const experience = [
 
 export const education = [
   {
-    degree: "Master's degree — Informatics Engineering",
-    school: 'Faculdade de Ciências da Universidade de Lisboa (FCUL)',
-    logo: 'logos/fcul.jpg',
-    period: '2018 — 2022',
-  },
-  {
     degree: "Bachelor's degree — Informatics Engineering",
     school: 'Faculdade de Ciências da Universidade de Lisboa (FCUL)',
     logo: 'logos/fcul.jpg',
@@ -171,8 +165,9 @@ export const education = [
   },
 ]
 
+// Each cert: { name, icon } — `icon` is a Simple Icons slug (see src/icons.js).
 export const certifications = [
-  'Google Associate Cloud Engineer (issued Sep 2021)',
+  { name: 'Google Associate Cloud Engineer (issued Sep 2021)', icon: 'googlecloud' },
 ]
 
 export const volunteering = [

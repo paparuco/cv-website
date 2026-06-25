@@ -1,6 +1,17 @@
 import { experience, education, certifications, volunteering } from '../data/cv'
+import { iconMap } from '../icons'
 
 const asset = (p) => `${import.meta.env.BASE_URL}${p}`
+
+function BrandIcon({ slug, className = 'h-5 w-5 shrink-0' }) {
+  const icon = iconMap[slug]
+  if (!icon) return null
+  return (
+    <svg role="img" aria-hidden="true" viewBox="0 0 24 24" className={className} fill={`#${icon.hex}`}>
+      <path d={icon.path} />
+    </svg>
+  )
+}
 
 function Logo({ src, alt }) {
   if (!src) return null
@@ -66,9 +77,9 @@ export default function Experience() {
             <h3 className="mb-4 font-mono text-sm font-medium text-accent">Certifications</h3>
             <ul className="space-y-2">
               {certifications.map((c) => (
-                <li key={c} className="flex gap-2 text-sm text-stone-300">
-                  <span className="text-accent">✓</span>
-                  {c}
+                <li key={c.name} className="flex items-center gap-2.5 text-sm text-stone-300">
+                  {c.icon ? <BrandIcon slug={c.icon} /> : <span className="text-accent">✓</span>}
+                  {c.name}
                 </li>
               ))}
             </ul>
