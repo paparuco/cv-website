@@ -102,6 +102,7 @@ export const experience = [
   {
     role: 'Platforms Engineer',
     company: 'NOS Inovação',
+    logo: 'logos/nos.jpg',
     period: 'May 2022 — Present',
     location: 'Lisbon, Portugal · Hybrid',
     bullets: [
@@ -114,6 +115,7 @@ export const experience = [
   {
     role: 'Cloud Engineer',
     company: 'NOS Inovação',
+    logo: 'logos/nos.jpg',
     period: 'Apr 2021 — May 2022',
     location: 'Lisbon, Portugal · Full-time',
     bullets: [
@@ -123,6 +125,7 @@ export const experience = [
   {
     role: 'Consultant',
     company: 'Onile IT',
+    logo: 'logos/onileit.jpg',
     period: 'Apr 2021 — Present',
     location: 'Full-time',
     bullets: [
@@ -132,6 +135,7 @@ export const experience = [
   {
     role: 'Software Developer',
     company: 'Randstad (external at Nokia)',
+    logo: 'logos/randstad.png',
     period: 'Sep 2020 — Apr 2021',
     location: 'Portugal',
     bullets: [
@@ -143,6 +147,7 @@ export const experience = [
   {
     role: 'Software Developer Trainee',
     company: 'Nokia',
+    logo: 'logos/nokia.jpg',
     period: 'Sep 2019 — Aug 2020',
     location: 'Lisbon Region, Portugal',
     bullets: [
@@ -155,11 +160,13 @@ export const education = [
   {
     degree: "Master's degree — Informatics Engineering",
     school: 'Faculdade de Ciências da Universidade de Lisboa (FCUL)',
+    logo: 'logos/fcul.jpg',
     period: '2018 — 2022',
   },
   {
     degree: "Bachelor's degree — Informatics Engineering",
     school: 'Faculdade de Ciências da Universidade de Lisboa (FCUL)',
+    logo: 'logos/fcul.jpg',
     period: '2014 — 2019',
   },
 ]

@@ -25,14 +25,14 @@ export default function Skills() {
       {skills.map((s) => (
         <div
           key={s.group}
-          className="rounded-xl border border-slate-800 bg-slate-900/40 p-5 transition-colors hover:border-slate-700"
+          className="rounded-xl border border-stone-800 bg-stone-900/40 p-5 transition-colors hover:border-stone-700"
         >
           <h3 className="mb-3 font-mono text-sm font-medium text-accent">{s.group}</h3>
           <div className="flex flex-wrap gap-2">
             {s.items.map((item) => (
               <span
                 key={item.name}
-                className="inline-flex items-center gap-1.5 rounded-md bg-slate-800/70 px-2.5 py-1 text-sm text-slate-300"
+                className="inline-flex items-center gap-1.5 rounded-md bg-stone-800/70 px-2.5 py-1 text-sm text-stone-300"
               >
                 {item.icon && <BrandIcon slug={item.icon} color={item.color} />}
                 {item.name}

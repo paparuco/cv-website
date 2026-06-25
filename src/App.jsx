@@ -14,22 +14,22 @@ export default function App() {
 
         <Section id="about" index="01" title="About">
           <div className="grid gap-8 md:grid-cols-3">
-            <p className="text-base leading-relaxed text-slate-400 md:col-span-2">
+            <p className="text-base leading-relaxed text-stone-400 md:col-span-2">
               {profile.about}
             </p>
             <ul className="space-y-2 text-sm">
-              <li className="flex justify-between border-b border-slate-800 pb-2">
-                <span className="text-slate-500">Location</span>
-                <span className="text-slate-300">{profile.location}</span>
+              <li className="flex justify-between border-b border-stone-800 pb-2">
+                <span className="text-stone-500">Location</span>
+                <span className="text-stone-300">{profile.location}</span>
               </li>
-              <li className="flex justify-between border-b border-slate-800 pb-2">
-                <span className="text-slate-500">Email</span>
+              <li className="flex justify-between border-b border-stone-800 pb-2">
+                <span className="text-stone-500">Email</span>
                 <a href={`mailto:${profile.email}`} className="text-accent hover:underline">
                   {profile.email}
                 </a>
               </li>
-              <li className="flex justify-between border-b border-slate-800 pb-2">
-                <span className="text-slate-500">GitHub</span>
+              <li className="flex justify-between border-b border-stone-800 pb-2">
+                <span className="text-stone-500">GitHub</span>
                 <a href="https://github.com/paparuco" target="_blank" rel="noreferrer" className="text-accent hover:underline">
                   @paparuco
                 </a>
@@ -47,14 +47,14 @@ export default function App() {
         </Section>
 
         <Section id="contact" index="04" title="Get in touch">
-          <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-8 text-center md:p-12">
-            <h3 className="text-2xl font-bold text-slate-100">Let's build something that automates the boring parts.</h3>
-            <p className="mx-auto mt-3 max-w-lg text-slate-400">
+          <div className="rounded-2xl border border-stone-800 bg-stone-900/40 p-8 text-center md:p-12">
+            <h3 className="font-display text-3xl font-semibold text-stone-100">Let's build something that automates the boring parts.</h3>
+            <p className="mx-auto mt-3 max-w-lg text-stone-400">
               Whether you have an opportunity, a question, or just want to connect — my inbox is always open.
             </p>
             <a
               href={`mailto:${profile.email}`}
-              className="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-slate-950 transition-transform hover:scale-[1.03]"
+              className="mt-6 inline-block rounded-full bg-accent px-6 py-3 text-sm font-semibold text-stone-950 transition-transform hover:scale-[1.03]"
             >
               Say hello
             </a>
@@ -62,8 +62,8 @@ export default function App() {
         </Section>
       </main>
 
-      <footer className="border-t border-slate-800/60 py-8">
-        <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6 text-sm text-slate-500 sm:flex-row sm:justify-between">
+      <footer className="border-t border-stone-800/60 py-8">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-3 px-6 text-sm text-stone-500 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} {profile.name}</p>
           <div className="flex gap-5">
             {socials.map((s) => (
