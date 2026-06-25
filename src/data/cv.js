@@ -24,15 +24,77 @@ export const socials = [
 ]
 
 // Grouped skills — from GitHub tech stack + LinkedIn.
+// Each item: { name, icon } where `icon` is a Simple Icons slug (https://simpleicons.org).
+// `color` optionally overrides the brand color (use for logos that are near-black,
+// so they stay visible on the dark background). Omit `icon` to show no logo.
 export const skills = [
-  { group: 'Core', items: ['Python', 'Java', 'Bash'] },
-  { group: 'Platform Engineering', items: ['Backstage', 'Internal Developer Platform', 'HashiCorp Vault', 'SonarQube'] },
-  { group: 'DevOps & IaC', items: ['Terraform', 'Terragrunt', 'Docker', 'Kubernetes', 'Helm', 'Argo CD'] },
-  { group: 'Cloud', items: ['Google Cloud (GCP)', 'Microsoft Azure'] },
-  { group: 'CI/CD & Automation', items: ['GitHub Actions', 'Camunda'] },
-  { group: 'Observability & Data', items: ['Grafana', 'PostgreSQL', 'SQL Server'] },
-  { group: 'Tooling', items: ['Linux', 'WSL', 'VS Code', 'GitHub Copilot', 'AI Agents'] },
-  { group: 'Languages', items: ['Portuguese (native)', 'English (professional)'] },
+  {
+    group: 'Core',
+    items: [
+      { name: 'Python', icon: 'python' },
+      { name: 'Java', icon: 'openjdk' },
+      { name: 'Bash', icon: 'gnubash' },
+    ],
+  },
+  {
+    group: 'Platform Engineering',
+    items: [
+      { name: 'Backstage', icon: 'backstage' },
+      { name: 'Internal Developer Platform' },
+      { name: 'HashiCorp Vault', icon: 'vault' },
+      { name: 'SonarQube', icon: 'sonarqubeserver' },
+    ],
+  },
+  {
+    group: 'DevOps & IaC',
+    items: [
+      { name: 'Terraform', icon: 'terraform' },
+      { name: 'Terragrunt', icon: 'terraform' },
+      { name: 'Docker', icon: 'docker' },
+      { name: 'Kubernetes', icon: 'kubernetes' },
+      { name: 'Helm', icon: 'helm' },
+      { name: 'Argo CD', icon: 'argo' },
+    ],
+  },
+  {
+    group: 'Cloud',
+    items: [
+      { name: 'Google Cloud (GCP)', icon: 'googlecloud' },
+      { name: 'Microsoft Azure' }, // Simple Icons dropped the Azure logo (trademark)
+    ],
+  },
+  {
+    group: 'CI/CD & Automation',
+    items: [
+      { name: 'GitHub Actions', icon: 'githubactions' },
+      { name: 'Camunda', icon: 'camunda' },
+    ],
+  },
+  {
+    group: 'Observability & Data',
+    items: [
+      { name: 'Grafana', icon: 'grafana' },
+      { name: 'PostgreSQL', icon: 'postgresql' },
+      { name: 'SQL Server' }, // Simple Icons dropped the SQL Server logo (trademark)
+    ],
+  },
+  {
+    group: 'Tooling',
+    items: [
+      { name: 'Linux', icon: 'linux', color: 'FCC624' },
+      { name: 'WSL' },
+      { name: 'VS Code' }, // Simple Icons dropped the VS Code logo (trademark)
+      { name: 'GitHub Copilot', icon: 'githubcopilot', color: 'ffffff' },
+      { name: 'AI Agents' },
+    ],
+  },
+  {
+    group: 'Languages',
+    items: [
+      { name: 'Portuguese (native)' },
+      { name: 'English (professional)' },
+    ],
+  },
 ]
 
 export const experience = [
