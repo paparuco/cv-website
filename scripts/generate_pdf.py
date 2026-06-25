@@ -70,10 +70,10 @@ story = []
 
 
 def section(label):
-    story.append(Spacer(1, 9))
+    story.append(Spacer(1, 5))
     story.append(Paragraph(label.upper(), sect))
     story.append(HRFlowable(width="100%", thickness=0.8, color=LINE,
-                            spaceBefore=1, spaceAfter=5))
+                            spaceBefore=1, spaceAfter=4))
 
 
 def role_row(left_html, period_text):
@@ -115,7 +115,7 @@ story.append(Paragraph(clean(p["about"]), body))
 section("Experience")
 for i, job in enumerate(DATA["experience"]):
     if i:
-        story.append(Spacer(1, 6))
+        story.append(Spacer(1, 4))
     role_row(f'{clean(job["role"])} <font color="#C9764A">·</font> {clean(job["company"])}',
              job["period"])
     if job.get("location"):
@@ -146,14 +146,7 @@ for grp in DATA["skills"]:
         f'<font name="Helvetica-Bold" color="#1C1917">{clean(grp["group"])}:</font> {clean(items)}',
         skill))
 
-# ── Volunteering ─────────────────────────────────────────────────────────
-if DATA.get("volunteering"):
-    section("Volunteering")
-    for v in DATA["volunteering"]:
-        role_row(f'{clean(v["role"])} <font color="#C9764A">·</font> {clean(v["org"])}',
-                 v["period"])
-        story.append(Paragraph(clean(v["description"]), body))
-        story.append(Spacer(1, 3))
+# Volunteering is intentionally omitted from the PDF (kept on the website only).
 
 
 def footer(canvas, doc):
@@ -168,7 +161,7 @@ def footer(canvas, doc):
 doc = SimpleDocTemplate(
     OUT, pagesize=A4,
     leftMargin=1.7 * cm, rightMargin=1.7 * cm,
-    topMargin=1.5 * cm, bottomMargin=1.5 * cm,
+    topMargin=1.3 * cm, bottomMargin=1.3 * cm,
     title="Ricardo Calçado — CV", author="Ricardo Calçado",
     subject="Curriculum Vitae",
 )
