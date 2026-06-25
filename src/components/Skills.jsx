@@ -1,9 +1,22 @@
 import { skills } from '../data/cv'
+import { iconMap } from '../icons'
 
-// Build a Simple Icons CDN URL. Optional brand-color override keeps near-black
-// logos (Linux, Copilot) visible on the dark background.
-function iconUrl({ icon, color }) {
-  return `https://cdn.simpleicons.org/${icon}${color ? `/${color}` : ''}`
+// Render a bundled Simple Icon as inline SVG. `color` overrides the brand hex
+// (used for near-black logos like Linux/Copilot so they stay visible on dark).
+function BrandIcon({ slug, color }) {
+  const icon = iconMap[slug]
+  if (!icon) return null
+  return (
+    <svg
+      role="img"
+      aria-hidden="true"
+      viewBox="0 0 24 24"
+      className="h-4 w-4 shrink-0"
+      fill={`#${color || icon.hex}`}
+    >
+      <path d={icon.path} />
+    </svg>
+  )
 }
 
 export default function Skills() {
@@ -21,21 +34,7 @@ export default function Skills() {
                 key={item.name}
                 className="inline-flex items-center gap-1.5 rounded-md bg-slate-800/70 px-2.5 py-1 text-sm text-slate-300"
               >
-                {item.icon && (
-                  <img
-                    src={iconUrl(item)}
-                    alt=""
-                    aria-hidden="true"
-                    width="16"
-                    height="16"
-                    loading="lazy"
-                    className="h-4 w-4"
-                    // Hide gracefully if a logo ever 404s, leaving just the label.
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                    }}
-                  />
-                )}
+                {item.icon && <BrandIcon slug={item.icon} color={item.color} />}
                 {item.name}
               </span>
             ))}

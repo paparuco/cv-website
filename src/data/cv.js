@@ -32,7 +32,7 @@ export const skills = [
     group: 'Core',
     items: [
       { name: 'Python', icon: 'python' },
-      { name: 'Java', icon: 'openjdk' },
+      { name: 'Java', icon: 'openjdk', color: 'E76F00' }, // openjdk logo is black; use Java orange
       { name: 'Bash', icon: 'gnubash' },
     ],
   },
@@ -52,7 +52,7 @@ export const skills = [
       { name: 'Terragrunt', icon: 'terraform' },
       { name: 'Docker', icon: 'docker' },
       { name: 'Kubernetes', icon: 'kubernetes' },
-      { name: 'Helm', icon: 'helm' },
+      { name: 'Helm', icon: 'helm', color: '8B9DF0' }, // brand navy is too dark on the dark bg
       { name: 'Argo CD', icon: 'argo' },
     ],
   },
